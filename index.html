@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a78bfa">
+  <meta name="description" content="16개의 질문으로 만나는 내 안의 귀여운 빌런. 숨겨진 본캐를 소환해 보세요!">
+  <title>내 안의 빌런 찾기 · 숨겨진 본캐를 소환하라!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a href="#" id="brand" aria-label="시작 화면으로">😈 <span>빌런 연구소<span class="brand-dot">.</span></span></a><span class="edition">PERSONALITY LAB / 001</span></header>
+  <main id="app">
+    <section id="start-screen" class="screen hero" aria-labelledby="start-title">
+      <div class="hero-copy"><span class="eyebrow">나도 몰랐던 나의 또 다른 얼굴</span><h1 id="start-title">착한 척은<br>여기까지<span class="purple">!</span></h1><p class="hero-sub">내 안의 <strong>빌런</strong> 찾기</p><p class="intro">친구 앞에선 천사, 속으로는 최종 보스?<br>16개의 일상 속 선택으로 숨겨진 본캐를 소환해 봐.</p><div class="test-meta"><span>✦ 16개의 질문</span><span>◷ 약 3분</span><span>♡ 회원가입 없이</span></div><button id="start-button" class="button primary">내 빌런 소환하기 <span>↗</span></button><button id="resume-button" class="button quiet" hidden>이어서 테스트하기 →</button><p class="tiny">정답은 없어. 가장 나다운 선택이면 충분해!</p></div>
+      <div class="hero-art" aria-label="귀여운 고양이 빌런 일러스트" role="img"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="art-label">WANTED : MY ALTER EGO</span><div class="cat"><div class="ear left"></div><div class="ear right"></div><div class="cat-face"><span class="eye"></span><span class="eye"></span><span class="cat-mouth">ω</span><span class="blush b1"></span><span class="blush b2"></span></div><div class="cat-body"><span>✦</span></div></div><span class="speech">세상 착한 얼굴 뒤에…</span><span class="character-tag">나의 빌런력은 몇 % ?</span></div>
+      <div class="bottom-strip"><span>귀여운 얼굴, 만만치 않은 본캐.</span><span>16 TYPES · 8 VILLAINS · 1 YOU</span></div>
+    </section>
+    <section id="question-screen" class="screen question-layout" hidden aria-labelledby="question-title"><div class="question-top"><button id="back-button" class="text-button">← 이전 질문</button><span id="question-count"></span></div><div id="progress" class="progress" role="progressbar" aria-label="테스트 진행률" aria-valuemin="0" aria-valuemax="16"><div id="progress-fill"></div></div><div class="question-card"><span id="question-category" class="eyebrow"></span><div id="question-emoji" class="question-emoji" aria-hidden="true"></div><h2 id="question-title" tabindex="-1"></h2><p class="question-hint">이럴 때 나는 어떤 쪽에 가까울까?</p><div id="answers" class="answers"></div><p id="question-note" class="tiny">너무 고민하지 말고, 평소의 나를 떠올려 봐.</p></div></section>
+    <section id="result-screen" class="screen result-layout" hidden aria-labelledby="result-title"><p class="eyebrow">소환 완료! 너의 숨겨진 본캐는</p><div class="result-card"><div class="result-top"><span>VILLAIN IDENTITY CARD</span><span id="result-code"></span></div><div id="result-emoji" class="result-emoji" aria-hidden="true"></div><h2 id="result-title" tabindex="-1"></h2><p id="result-quote" class="result-quote"></p><p id="result-description"></p><div class="power"><div><strong>나의 빌런력</strong><span id="power-label"></span></div><div class="power-track"><div id="power-fill"></div></div><p class="tiny">일상 속 장난기를 표현한 재미용 점수예요.</p></div><div class="traits"><div><span>✦ 숨겨진 무기</span><strong id="result-strength"></strong></div><div><span>⚡ 흑화 트리거</span><strong id="result-trigger"></strong></div></div></div><div class="match-card"><span>함께라면 더 재밌는 조합</span><strong id="result-match"></strong><p>궁합도 가볍게 즐기는 창작 콘텐츠예요.</p></div><div class="result-actions"><button id="share-button" class="button primary">결과 공유하기 ↗</button><button id="download-button" class="button secondary">결과 카드 저장 ↓</button><button id="restart-button" class="button quiet">↻ 다시하기</button></div><div id="share-fallback" hidden><label for="share-text">아래 내용을 복사해서 공유해 주세요.</label><textarea id="share-text" readonly rows="4"></textarea><button id="copy-button" class="button secondary">공유 문구 복사</button></div></section>
+  </main>
+  <footer>내 안의 빌런 찾기 <span>✦</span> 이 테스트는 공식 MBTI 검사가 아닌 오락용 성향 테스트입니다.</footer><div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
